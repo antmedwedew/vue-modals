@@ -7,7 +7,7 @@
           modal first
         </button>
         <Modal
-          v-if="modalFirst"
+          v-show="modalFirst"
           title="first modal"
           @close="modalFirst = !modalFirst"
         >
