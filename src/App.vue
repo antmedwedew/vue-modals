@@ -13,6 +13,12 @@
           modal second
         </button>
         <ModalSecond @close="modalSecond = false" v-show="modalSecond" />
+
+        <!-- validate modal -->
+        <button class="btn btnPrimary" @click="modalValidate = !modalValidate">
+          modal validate
+        </button>
+        <ModalValidate @close="modalValidate = false" v-show="modalValidate" />
       </div>
     </div>
   </div>
@@ -21,15 +27,23 @@
 <script>
 import ModalFirst from "@/components/ModalFirst.vue";
 import ModalSecond from "@/components/ModalSecond.vue";
+import ModalValidate from "@/components/ModalValidate.vue";
 
 export default {
-  components: { ModalFirst, ModalSecond },
+  components: { ModalFirst, ModalSecond, ModalValidate },
 
   data() {
     return {
       modalFirst: false,
       modalSecond: false,
+      modalValidate: false,
     };
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.btn {
+  margin-right: 10px;
+}
+</style>
