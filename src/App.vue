@@ -19,6 +19,19 @@
           modal validate
         </button>
         <ModalValidate @close="modalValidate = false" v-show="modalValidate" />
+
+        <!-- sing in / sing up -->
+        <!-- sing in -->
+        <button class="btn btnPrimary" @click="ModalSingIn = !ModalSingIn">
+          Sing in
+        </button>
+        <ModalSingIn @close="ModalSingIn = false" v-show="ModalSingIn" />
+
+        <!-- sing up -->
+        <button class="btn btnPrimary" @click="ModalRegister = !ModalRegister">
+          Register
+        </button>
+        <ModalRegister @close="ModalRegister = false" v-show="ModalRegister" />
       </div>
     </div>
   </div>
@@ -28,15 +41,26 @@
 import ModalFirst from "@/components/ModalFirst.vue";
 import ModalSecond from "@/components/ModalSecond.vue";
 import ModalValidate from "@/components/ModalValidate.vue";
+import ModalRegister from "@/components/ModalRegister.vue";
+import ModalSingIn from "@/components/ModalSingIn.vue";
 
 export default {
-  components: { ModalFirst, ModalSecond, ModalValidate },
+  components: {
+    ModalFirst,
+    ModalSecond,
+    ModalValidate,
+    ModalRegister,
+    ModalSingIn,
+  },
 
   data() {
     return {
       modalFirst: false,
       modalSecond: false,
       modalValidate: false,
+      modalSingIn: false,
+      ModalRegister: false,
+      ModalSingIn: false,
     };
   },
 };
