@@ -1,1 +1,1 @@
-this is project modals on Vue
+# модальные окна и формы с валидацией на vue js
